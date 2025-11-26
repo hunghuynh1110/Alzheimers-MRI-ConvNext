@@ -75,7 +75,7 @@ The original ConvNeXt architecture is shown in [Figure 2](#convnext-structure) .
 
 <a id="convnext-structure"></a>
 
-![ConvNeXt Architecture](Images/report/ConvNeXt-structure.webp)
+![ConvNeXt Architecture](Images/Report/ConvNeXt-structure.webp)
 
 Figure 2. ConvNeXt architecture, adapted from GeeksforGeeks [[2]](#convnext-gfg).
 
@@ -264,7 +264,7 @@ The UMAP visualization in [Figure 7](#umap) shows separation between AD and NC e
 
 <a id="umap"></a>
 
-![UMAP](Images/report/umap_test_embeddings.png)
+![UMAP](Images/Report/umap_test_embeddings.png)
 
 Figure 7. UMAP projection of test set feature embeddings.
 
