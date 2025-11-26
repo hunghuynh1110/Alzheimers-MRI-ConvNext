@@ -1,7 +1,6 @@
 # ConvNeXt Alzheimer's Classification
 
-PatternAnalysis-2025 | Recognition Project - Hard Difficulty
-Author: s4938484 - Gia Hung Huynh
+Author: Gia Hung Huynh
 
 ## Table of Contents
 
@@ -36,7 +35,7 @@ Author: s4938484 - Gia Hung Huynh
 Alzheimer’s disease (AD) is a progressive neurodegenerative disorder characterized by structural brain changes visible in MRI scans.
 The goal of this project is to classify MRI brain slices from the ADNI dataset into Alzheimer’s Disease (AD) or Cognitively Normal (CN) categories.
 
-This project goal is to classify between Alzheimer's Disease (AD) and Normal Control (NC) images in the Alzheimer's Disease Neuroimaging Initiative (ADNI) brain dataset [[1]](#adni-link) and contributes to the open-source PatternAnalysis repository under the recognition branch. The desired test accuracy is 0.8, as specified in the requirement.
+This project goal is to classify between Alzheimer's Disease (AD) and Normal Control (NC) images in the Alzheimer's Disease Neuroimaging Initiative (ADNI) brain dataset [[1]](#adni-link) and contributes to the open-source [PatternAnalysis](https://github.com/shakes76/PatternAnalysis-2025) repository.
 
 The model reaches a 0.80933 accuracy on the ADNI test dataset
 
@@ -119,7 +118,7 @@ Multiple ConvNeXtBlocks are sequentially stacked to form ConvNeXt stages. Betwee
 
 ### Overview 
 
-The dataset used in this project is a subset of the **ADNI (Alzheimer’s Disease Neuroimaging Initiative)** MRI collection, provided by UQ via rangpur. Or can be downloaded via [this](https://drive.google.com/file/d/1BJsYNkdV8fqUY7FWKzhUvDBGIzyyLZZd/view?usp=sharing)
+The dataset used in this project is a subset of the **ADNI (Alzheimer’s Disease Neuroimaging Initiative)** MRI collection. It can be downloaded via [this](https://drive.google.com/file/d/1BJsYNkdV8fqUY7FWKzhUvDBGIzyyLZZd/view?usp=sharing)
 
 Each image in the dataset is grayscale and have a resolution of `256 x 240` pixels. The filenames follow the format `patientID_index.png` where `patientID` identifies the patient and `index` is the image number.
 
