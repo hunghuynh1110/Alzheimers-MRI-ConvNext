@@ -35,7 +35,7 @@ Author: Gia Hung Huynh
 Alzheimer’s disease (AD) is a progressive neurodegenerative disorder characterized by structural brain changes visible in MRI scans.
 The goal of this project is to classify MRI brain slices from the ADNI dataset into Alzheimer’s Disease (AD) or Cognitively Normal (CN) categories.
 
-This project goal is to classify between Alzheimer's Disease (AD) and Normal Control (NC) images in the Alzheimer's Disease Neuroimaging Initiative (ADNI) brain dataset [[1]](#adni-link) and contributes to the open-source [PatternAnalysis](https://github.com/shakes76/PatternAnalysis-2025) repository.
+This project goal is to classify between Alzheimer's Disease (AD) and Normal Control (NC) images in the Alzheimer's Disease Neuroimaging Initiative (ADNI) brain dataset [[1]](#adni-link).
 
 The model reaches a 0.80933 accuracy on the ADNI test dataset
 
@@ -57,7 +57,7 @@ The model reaches a 0.80933 accuracy on the ADNI test dataset
 
 ### ConvNeXtBlock Components
 
-Our model employs a custom reimplementation of the ConvNeXt architecture, built from scatch and tweaked to better suit the characteristics of the ADNI dataset. At the core of this design is the ConvNeXtBlock, which integrates several key components inspired by both convolutional and transformer-based architectures.
+Our model employs a custom reimplementation of the ConvNeXt architecture, built from scratch and tweaked to better suit the characteristics of the ADNI dataset. At the core of this design is the ConvNeXtBlock, which integrates several key components inspired by both convolutional and transformer-based architectures.
 The ConvNeXt Block architecture is shown in [Figure 1](#convnext-block).
 
 <a id="convnext-block"></a>
@@ -170,7 +170,7 @@ This split ensures that the model’s generalisation is evaluated on entirely un
 
 - The model was trained on the ADNI dataset using PyTorch framework. The model was trained for 400 epochs with early stopping based on validation loss to prevent overfitting. 
 - The AdamW optimizer was used to improve training stability and reduce overfitting through weight decay. Regularization schemes such as Label Smoothing [[6]](#label-smoothing) and Drop Path [[3]](#drop-path) were used to improve generalization.
-- Schedule CutMix and MixUp were also used during training to help preven overfitting and increase overall generalization [[8]](#schedule-cutmix-mixup)
+- Schedule CutMix and MixUp were also used during training to help prevent overfitting and increase overall generalization [[8]](#schedule-cutmix-mixup)
 
 
 #### Stochastic Weight Averaging (SWA)
@@ -267,7 +267,7 @@ The UMAP visualization in [Figure 7](#umap) shows separation between AD and NC e
 
 Figure 7. UMAP projection of test set feature embeddings.
 
-These results show that the model performs well overall, with particularly strong recall suggesting a good sensitiviy in detecting positive cases.
+These results show that the model performs well overall, with particularly strong recall suggesting a good sensitivity in detecting positive cases.
 
 
 
@@ -295,20 +295,22 @@ pip install -r requirements.txt
 The directory is assumed to follow this structure
 
 ```
-convnext_alzheimer_49384848
+Alzheimers-MRI-ConvNext
 ├── AD_NC
 │   ├── test
-│   │   ├── 388206_78.jpeg
+│   │   └── ...
 │   └── train
-├── constants.py
+│       ├── AD
+│       │   ├── 388206_78.jpeg
+│       └── NC
 ├── Images
 │   ├── Report
-│   ├── ADNI
+├── constants.py
 ├── dataset.py
 ├── modules.py
-├── notetrain.ipynb
 ├── predict.py
 ├── README.md
+├── requirements.txt
 ├── train.py
 └── utils.py
 ```
